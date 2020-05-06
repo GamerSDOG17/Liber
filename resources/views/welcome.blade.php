@@ -69,10 +69,17 @@
             @if (Route::has('login'))
                     <div class="top-right links">
                     @if(Auth::guard('professor')->check() || Auth::check() || Auth::guard('admin')->check())
+<<<<<<< HEAD
                        <a href="{{ url('/home') }}">Home</a><button>
                     @else
                         <a href="{{ route('login') }}" style="color: black; font-size:25px;" class="btn btn-link" role="button">Aluno</a>
                         <a href="{{ url('/professor') }}" style="color: black; font-size:25px;" class="btn btn-link" role="button">Professor</a>
+=======
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Aluno</a>
+                        <a href="{{ url('/professor') }}">Professor</a>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
                     @endif
                 </div>
             @endif

@@ -51,8 +51,13 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
+<<<<<<< HEAD
                                 <a style="font-size: 25px; color:white;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::guard('professor')->user()->name }}
+=======
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::guard('professor')->user()->name }} <span class="caret"></span>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

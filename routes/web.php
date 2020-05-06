@@ -20,12 +20,16 @@ Route::get('/', function () {
 Route::group(['middleware' => 'user'], function () {
     Auth::routes();
     Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
     Route::get('/home/chat', 'ChatController@index')->name('chat');
+=======
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
 });
 
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/logout', 'Auth\LoginController@protectLogout')->name('protect.logout');
 
+<<<<<<< HEAD
 
 Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin', 'AdminController@index')->name('admin.index');
@@ -37,6 +41,19 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('admin/deletado/{id}', 'AdminController@updateDeletado')->name('admin.update.deletado');
 });
 
+=======
+
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/admin', 'AdminController@index')->name('admin.index');
+    Route::get('/admin/deletado', 'AdminController@indexDeletado')->name('admin.index.deletado');
+    Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+
+    Route::get('admin/{id}', 'AdminController@update')->name('admin.update');
+    Route::get('admin/deletado/{id}', 'AdminController@updateDeletado')->name('admin.update.deletado');
+});
+
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
 Route::group(['middleware' => 'professor'], function () {
     Route::get('/professor', 'ProfessorController@index')->name('professor.dashboard');
     Route::post('/professor/login', 'Auth\ProfessorLoginController@login')->name('professor.login.submit');
@@ -46,8 +63,11 @@ Route::group(['middleware' => 'professor'], function () {
 
     Route::get('/professor/criacao', 'CriarSessaoController@index')->name('teladecriacao');
     Route::post('/professor/criacao', 'CriarSessaoController@store')->name('teladecriacao.submit');
+<<<<<<< HEAD
 
     Route::get('/professor/chat', 'ChatController@index')->name('chat');
+=======
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
     
     Route::get('/professor/password/reset', 'Auth\ForgotProfessorPasswordController@ShowLinkRequestForm')->name('professor.password.request');
     Route::post('/professor/password/email', 'Auth\ForgotProfessorPasswordController@SendResetLinkEmail')->name('professor.password.email');

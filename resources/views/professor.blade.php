@@ -12,16 +12,25 @@
     <div style="text-align: right;" >
     <button type="button"class="btn btn-light mr-5 btn-lg"> <a href="{{ route('teladecriacao') }}">Criar Sessão</a></button>
     <button type="button"class="btn btn-light mr-5 btn-lg"> <a href="#" class="card-link" data-toggle="modal" data-target="#perfilModal">Meu Perfil</a></button>
+<<<<<<< HEAD
     <button type="button"class="btn btn-light mr-5 btn-lg"> <a href="{{ route('chat') }}">Participar Sessão</a></button>
+=======
+    <button type="button"class="btn btn-light mr-5 btn-lg"> <a href="#">Participar Sessão</a></button>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
     </div>
     </div> 
     </form>
 
+<<<<<<< HEAD
     
     <div style="background-color: black;">
       <hr>
        <div style="color: white; font-size:25px;" class="ml-5"> Sessões Criadas</div>
       <hr>
+=======
+    <div class="w3-bar  w3-black mt-2 mb-3">
+       <div class="w3-bar-item w3-left"> Sessões Criadas:</div>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
     </div>
 
     <form class="form-group">
@@ -70,11 +79,17 @@
     </form>
    </form>      
             
+<<<<<<< HEAD
    <div style="background-color: black;">
     <hr>
      <div style="color: white; font-size:25px;" class="ml-5"> Sessões Visitadas:</div>
     <hr>
   </div>
+=======
+    <div class="w3-bar  w3-black mt-2 mb-3">
+        <div class="w3-bar-item w3-left"> Sessões Visitadas:</div>
+     </div>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
 
      <form class="form-group">
         <div class="form-row">
@@ -84,7 +99,11 @@
           <li class="list-group-item">Criador: </li>
           <li class="list-group-item">Suas Postagens: </li>
           <li class="list-group-item">Personagens: </li>
+<<<<<<< HEAD
           <li class="list-group-item">Encerramento da sessão </li>
+=======
+          <li class="list-group-item">Encerramento da sessão: </li>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
             <button class="btn btn-classic " type="submit">  
               <a href="#" class="card-link" data-toggle="modal" data-target="#excluirModal"><svg class="bi bi-x-circle" width="4em" height="10em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/>
@@ -127,9 +146,15 @@
             </button>
           </div>
           <div style=text-align:center; class="modal-body">
+<<<<<<< HEAD
               <h3>Insira uma imagem: </h3>
               <label for="perfilImgAluno" class="custom-file-upload" id="perfilTela">
                   <input id="perfilImgAluno" type="file">
+=======
+              <p>Insira uma imagem: </p>
+              <label for="perfilImg" class="custom-file-upload" id="perfilTela">
+                  <input id="perfilImg" type="file">
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
                   <svg class=" bi bi-person-square" width="15em" height="8em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M14 1H2a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2z" clip-rule="evenodd"/>
                   <path fill-rule="evenodd" d="M2 15v-1c0-1 1-4 6-4s6 3 6 4v1H2zm6-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
@@ -138,6 +163,7 @@
               <hr>
               <form>
                   <div class="form-group row">
+<<<<<<< HEAD
                     <label for="inputNome" style="font-size: 20px;" class="col-sm-2 col-form-label mb-1">Nome: </label>
                     <div class="col-sm-10">
                       <input style="font-size:15px;" type="text" class="form-control col-md-6" id="InputTexto" placeholder="Nome">
@@ -154,6 +180,23 @@
                     </div>  
                   </div>
                 </div> 
+=======
+                    <label for="inputNome" class="col-sm-2 col-form-label mb-1">Nome: </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control mt-2 col-md-6" id="inputTexto" placeholder="Nome">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEscola" class="col-sm-2 col-form-label mb-3">Escola: </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control mt-2 col-md-6" id="inputEscola" placeholder="Escola">
+                    </div>
+                    <label for="inputEmail" class="col-sm-2 col-form-label mb-1">Email: </label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control mt-2 col-md-6" id="inputEmail" placeholder="Email">
+                    </div>  
+                  </div>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
                 </form>
           
           <div class="modal-footer">
@@ -163,20 +206,31 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   </div> 
   
+=======
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
   
     <div class="modal" tabindex="-1" role="dialog" id="encerrarModal">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
+<<<<<<< HEAD
             <h4 class="modal-title">Encerrar sessão</h4>
+=======
+            <h5 class="modal-title">Encerrar sessão</h5>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
+<<<<<<< HEAD
             <h3>Deseja encerrar essa sessão agora ?</h3>
+=======
+            <p>Deseja encerrar essa sessão agora ?</p>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
@@ -187,15 +241,23 @@
     </div>
   
     <div class="modal" id="alterarDataModal" tabindex="-1" role="dialog" width="50px">
+<<<<<<< HEAD
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title">Alterar Data de Encerramento</h4>
+=======
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Alterar Data de Encerramento</h5>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div style=text-align:center; class="modal-body">
+<<<<<<< HEAD
               <h3 style="text align:center;">Data de encerramento: </h3>
             
               <form>
@@ -207,6 +269,34 @@
                               
           <div style="text-align: center" class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Voltar</button>
+=======
+              <p style="text align:center;">Data de encerramento: </p>
+              <div class="container">
+                <div class="col-sm-6" style="height:130px;">
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker9'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar">
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker9').datetimepicker({
+                            viewMode: 'years'
+                        });
+                    });
+                </script>
+            </div>
+            
+               <hr>
+                              
+          <div style="text-align: center" class="modal-footer">
+            <button type="button" class="btn btn-secondary close" data-dismiss="modal" aria-label="Close">Voltar</button>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
             <button type="button" class="mb-1 btn btn-primary">Encerrar</button>
           </div>
         </div>
@@ -217,13 +307,21 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
+<<<<<<< HEAD
             <h4 class="modal-title">Excluir sessão</h4>
+=======
+            <h5 class="modal-title">Excluir sessão</h5>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
+<<<<<<< HEAD
             <h3>Deseja excluir essa sessão agora ?</h3>
+=======
+            <p>Deseja excluir essa sessão agora ?</p>
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>

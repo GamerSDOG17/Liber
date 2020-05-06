@@ -58,8 +58,13 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
+<<<<<<< HEAD
                                     <a style="font-size: 20px;" class="btn btn-link" href="{{ route('professor.password.request') }}">
                                         {{ __('Esqueceu sua senha ?') }}
+=======
+                                    <a class="btn btn-link" href="{{ route('professor.password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+>>>>>>> 710d482cd7235aa3529e5a11820e6028ff5868c2
                                     </a>
                                 @endif
                             </div>
