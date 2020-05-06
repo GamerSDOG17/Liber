@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::group(['middleware' => 'user'], function () {
     Auth::routes();
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home/chat', 'ChatController@index')->name('chat');
 });
 
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
@@ -27,9 +28,13 @@ Route::get('/logout', 'Auth\LoginController@protectLogout')->name('protect.logou
 
 
 Route::group(['middleware' => 'admin'], function () {
-    Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
-    Route::get('/admin/login', 'Auth\AdminLoginController@index')->name('admin.login');
+    Route::get('/admin', 'AdminController@index')->name('admin.index');
+    Route::get('/admin/deletado', 'AdminController@indexDeletado')->name('admin.index.deletado');
+    Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+
+    Route::get('admin/{id}', 'AdminController@update')->name('admin.update');
+    Route::get('admin/deletado/{id}', 'AdminController@updateDeletado')->name('admin.update.deletado');
 });
 
 Route::group(['middleware' => 'professor'], function () {
@@ -38,10 +43,11 @@ Route::group(['middleware' => 'professor'], function () {
     Route::get('/professor/login', 'Auth\ProfessorLoginController@showLoginForm')->name('professor.login');
     Route::get('/professor/register', 'Auth\ProfessorRegisterController@showProfessorRegisterForm')->name('professor.register');
     Route::post('/professor/register', 'Auth\ProfessorRegisterController@register');
-    Route::post('/professor/register/logout', 'Auth\ProfessorLoginController@logout')->name('professor.logout');
 
     Route::get('/professor/criacao', 'CriarSessaoController@index')->name('teladecriacao');
     Route::post('/professor/criacao', 'CriarSessaoController@store')->name('teladecriacao.submit');
+
+    Route::get('/professor/chat', 'ChatController@index')->name('chat');
     
     Route::get('/professor/password/reset', 'Auth\ForgotProfessorPasswordController@ShowLinkRequestForm')->name('professor.password.request');
     Route::post('/professor/password/email', 'Auth\ForgotProfessorPasswordController@SendResetLinkEmail')->name('professor.password.email');

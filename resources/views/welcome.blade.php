@@ -8,11 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel = "stylesheet"  href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css"  integridade = "SHA384-ggOyR0iXCbMQv3Xipma34MD + DH / 1fQ784 / j6cY / iJTQUOhcWr7x9JvoRxT2MZw1T"  crossorigin = "anônimo" >
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="floating-labels.css" rel="stylesheet">
-  
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
@@ -23,7 +19,6 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-                font-size: 100%;  
             }
 
             .full-height {
@@ -67,34 +62,25 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-            #titulo{
-                font-size: 1200%;
-            }
-        </style>
+        </style> 
     </head>
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Início</a>
+                    <div class="top-right links">
+                    @if(Auth::guard('professor')->check() || Auth::check() || Auth::guard('admin')->check())
+                       <a href="{{ url('/home') }}">Home</a><button>
                     @else
-                    <a href="{{ route('login') }}" class="btn btn-link" >Aluno</a>
-                        <a href="{{ url('/professor') }}" class="btn btn-link">Professor</a>
-                    @endauth
+                        <a href="{{ route('login') }}" style="color: black; font-size:25px;" class="btn btn-link" role="button">Aluno</a>
+                        <a href="{{ url('/professor') }}" style="color: black; font-size:25px;" class="btn btn-link" role="button">Professor</a>
+                    @endif
                 </div>
             @endif
             <div class="content">
-                <div class="title m-b-md" id="titulo">
-                    Liber
+                <div style="font-size: 250px; color:black;"  class="title m-b-md">
+                    <u>\\Liber//</u>
                 </div>
             </div>
         </div>
     </body>
 </html>
-
-
-<script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
